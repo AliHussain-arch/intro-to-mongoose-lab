@@ -49,7 +49,7 @@ function findByIdAndUpdate () {
     const UpdatedcustomerName = prompt('Enter the new customer name: ');
     const UpdatedcustomerAge = prompt('Enter the new customer age: ');
     console.log();
-    return Customer.findByIdAndUpdate(customerID,{name: UpdatedcustomerName, age: UpdatedcustomerAge})
+    return Customer.findByIdAndUpdate(customerID,{name: UpdatedcustomerName.trim(), age: UpdatedcustomerAge})
         .catch(error => {
             console.error('Invalid Input');
         });
